@@ -22,8 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-const PORT = process.env.PORT || 3300;
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -40,8 +38,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
+const port = process.env.PORT || 3300;
 app.listen(PORT, () => {
-  console.log("PORT STARTED : "+PORT);
+  console.log("PORT STARTED : "+port);
 })
 
 module.exports = app;
