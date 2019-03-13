@@ -39,9 +39,9 @@ app.use(function(err, req, res, next) {
 });
 
 
-const port = process.env.PORT || 3300;
+const PORT = process.env.PORT || 3300;
 app.listen(PORT, () => {
-  console.log("PORT STARTED : "+port);
+  console.log("PORT STARTED : "+PORT);
 })
 
 module.exports = app;
