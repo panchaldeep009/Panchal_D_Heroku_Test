@@ -1,2 +1,17 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="welcome_message">
+<h2>{{welcome_message}}</h2>
+</div>
+    <main>
+{{#all_wine}}
+<a href="/wine/{{id}}">
+    <div class="wine">
+        <img src="{{image}}" />
+        <div class="info">
+            <strong>{{name}}</strong>
+            <p>${{price}}</p>
+        </div>
+    </div>
+</a>
+{{/all_wine}}
+</main>
+
